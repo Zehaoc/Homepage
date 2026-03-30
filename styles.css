@@ -272,11 +272,11 @@ section h2 .works-scope {
 .pub-abs::before {
   content: "▸";
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 0.42em;
   color: var(--accent);
-  font-size: 0.82em;
+  font-size: 1.05em;
   opacity: 0.88;
-  transform: translateY(-0.04em);
+  transform: translateY(-0.02em);
 }
 
 @media (max-width: 720px) {
