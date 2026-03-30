@@ -1,13 +1,17 @@
 /* Minimal academic homepage: avatar, bio, publication tables */
 :root {
-  --text: #1a1a1a;
-  --muted: #555;
+  --text: #171717;
+  --muted: #525252;
   --link: #0b57d0;
   --link-hover: #0842a0;
-  --border: #e0e0e0;
+  --border: #e5e5e5;
   --bg: #fafafa;
   --card: #fff;
   --accent: #8b0000;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-serif: "Source Serif 4", "Noto Serif SC", "Source Han Serif SC",
+    Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -20,12 +24,14 @@ html {
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
-    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.6;
+  letter-spacing: -0.011em;
   color: var(--text);
   background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -63,24 +69,29 @@ a:hover {
 
 .profile-name {
   margin: 0 0 0.35rem;
-  font-size: 1.75rem;
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  text-rendering: optimizeLegibility;
 }
 
 .profile-title {
   margin: 0 0 0.55rem;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--muted);
-  line-height: 1.35;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
 }
 
 .profile-affil {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.55;
+  font-size: 0.9375rem;
+  line-height: 1.58;
   color: var(--muted);
+  letter-spacing: -0.01em;
 }
 
 .profile-header .bio {
@@ -129,17 +140,28 @@ section {
 }
 
 section h2 {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin: 0 0 0.75rem;
   padding-bottom: 0.35rem;
   border-bottom: 2px solid var(--accent);
   display: inline-block;
 }
 
+section h2 .works-scope {
+  font-weight: 500;
+  font-size: 0.92em;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
 .bio p {
   margin: 0 0 1rem;
   text-align: justify;
   hyphens: auto;
+  line-height: 1.65;
+  letter-spacing: -0.008em;
 }
 
 .pub-table {
@@ -204,34 +226,38 @@ section h2 {
 
 .pub-title {
   font-weight: 600;
-  font-size: 1.02rem;
-  line-height: 1.38;
+  font-size: 1.015rem;
+  line-height: 1.4;
   margin-bottom: 0.35rem;
+  letter-spacing: -0.015em;
 }
 
 .pub-authors {
-  font-size: 0.9rem;
+  font-size: 0.895rem;
   color: var(--muted);
   margin-bottom: 0.25rem;
+  line-height: 1.5;
 }
 
 .pub-venue {
   display: inline;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   font-style: italic;
   margin-right: 0.45em;
 }
 
 .pub-links {
   display: inline;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .pub-abs {
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-top: 0.35rem;
-  line-height: 1.55;
+  line-height: 1.58;
+  letter-spacing: -0.006em;
 }
 
 @media (max-width: 720px) {
