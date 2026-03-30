@@ -269,6 +269,16 @@ section h2 .works-scope {
   letter-spacing: -0.006em;
 }
 
+.pub-abs::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.4em;
+  color: var(--accent);
+  font-size: 0.82em;
+  opacity: 0.88;
+  transform: translateY(-0.04em);
+}
+
 @media (max-width: 720px) {
   .pub-table tr:not(:last-child) td {
     border-bottom: none;
