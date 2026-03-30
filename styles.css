@@ -75,6 +75,15 @@ a:hover {
   color: var(--muted);
 }
 
+.profile-header .bio {
+  margin: 1.1rem 0 0;
+  padding: 0;
+}
+
+.profile-header .bio p:last-child {
+  margin-bottom: 0;
+}
+
 .profile-figure {
   margin: 0;
   flex-shrink: 0;
@@ -100,6 +109,10 @@ a:hover {
 
   .profile-ident {
     padding-top: 0;
+  }
+
+  .profile-header .bio p {
+    text-align: left;
   }
 }
 
@@ -155,8 +168,7 @@ section h2 {
   width: 200px;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
@@ -167,8 +179,7 @@ section h2 {
 .pub-table .thumb .thumb-ph {
   width: 200px;
   max-width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  min-height: 90px;
   border-radius: 6px;
   border: 1px dashed #ccc;
   background: #f0f0f0;
@@ -197,12 +208,14 @@ section h2 {
 }
 
 .pub-venue {
+  display: inline;
   font-size: 0.88rem;
   font-style: italic;
-  margin-bottom: 0.35rem;
+  margin-right: 0.45em;
 }
 
 .pub-links {
+  display: inline;
   font-size: 0.88rem;
 }
 
