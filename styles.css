@@ -56,7 +56,7 @@ a:hover {
 .profile-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 1.5rem 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
@@ -113,13 +113,20 @@ a:hover {
 .profile-figure {
   margin: 0;
   flex-shrink: 0;
+  width: 200px;
+  max-width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-height: 0;
+  padding-top: 0.15rem;
 }
 
 .profile-photo {
   width: 100%;
-  max-width: 200px;
-  aspect-ratio: 3 / 4;
-  object-fit: contain;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
   object-position: center;
   display: block;
   border-radius: 4px;
@@ -136,6 +143,22 @@ a:hover {
 
   .profile-ident {
     padding-top: 0;
+  }
+
+  .profile-figure {
+    justify-content: center;
+    align-self: center;
+    padding-top: 0;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: none;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
   }
 
   .profile-header .bio p {
