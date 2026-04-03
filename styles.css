@@ -116,9 +116,11 @@ a:hover {
 }
 
 .profile-photo {
+  width: 100%;
   max-width: 200px;
-  width: auto;
-  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
   display: block;
   border-radius: 4px;
   border: 1px solid var(--border);
